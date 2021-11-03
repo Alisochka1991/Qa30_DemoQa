@@ -10,6 +10,7 @@ public class ApplicationManager {
 
     WebDriver wd;
     AlertHelper alert;
+    StudentHelper studentHelper;
 
     public void init() {
         wd = new ChromeDriver();
@@ -18,6 +19,8 @@ public class ApplicationManager {
         wd.navigate().to("https://demoqa.com/");
 
         alert = new AlertHelper(wd);
+        studentHelper = new StudentHelper(wd);
+
         alert.hideFooter();
 
 
@@ -28,5 +31,9 @@ public class ApplicationManager {
 
     public AlertHelper alert() {
         return alert;
+    }
+
+    public StudentHelper studentHelper() {
+        return studentHelper;
     }
 }
