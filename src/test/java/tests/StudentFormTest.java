@@ -23,7 +23,7 @@ public class StudentFormTest extends TestBase{
                 .email("john@mail.com")
                 .gender("Male")
                 .phone("1234567890")
-                .birthday("25 05 1990")
+                .birthday("25 5 1990")
                 .subject("Maths")
                 .hobbies("Sport")
                 .address("Tel Aviv")
@@ -31,7 +31,9 @@ public class StudentFormTest extends TestBase{
                 .city("Gurgaon")
                 .build();
         app.studentHelper().fillForm(model);
+
         app.studentHelper().uploadPicture();
+
         app.studentHelper().pause(500);
         app.studentHelper().submit();
         app.studentHelper().pause(1000);
